@@ -17,8 +17,9 @@
 # foreign_option_3='dhcp-option DOMAIN be.bnc.ch'
 # foreign_option_4='dhcp-option DOMAIN-SEARCH bnc.local'
 
-## You might need to set the path manually here, i.e.
+## You might need to set the path manually here
 RESOLVCONF=$(which resolvconf)
+[ -z "$RESOLVCONF" ] && RESOLVCONF=/usr/bin/resolvconf
 
 case $script_type in
 
